@@ -9,6 +9,9 @@ const dbURL =
 
 //connecting to Database
 //const dbURL ="mongodb+srv://mydb:93928@cluster0.g0he0.mongodb.net/Test?retryWrites=true&w=majority";
+
+// link for postman collection : https://www.getpostman.com/collections/d8b65b634e89029b3461
+
 mongoose
   .connect(dbURL)
   .then(() =>
@@ -21,6 +24,7 @@ app.use(express.json());
 
 // middleware to check auth
 // username : admin ; password:supersecret
+
 app.use(
   basicAuth({
     users: { admin: "supersecret" },
